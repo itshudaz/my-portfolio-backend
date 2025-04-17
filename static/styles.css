@@ -1,0 +1,302 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: linear-gradient(to top, #1c1f26, #333842);
+    background-attachment: fixed;
+}
+
+h2 {
+    color: white;
+}
+
+p {
+    color: rgb(200, 200, 200);
+}
+
+.navbar {
+    background-color: #1c1f26;
+    border: 2px solid #333842;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    padding: 1rem 2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    display: flex;
+    text-decoration: none;
+    color: rgb(252, 142, 142);
+    font-weight: bold;
+}
+
+.head {
+    overflow: hidden;
+    height: 35rem;
+}
+
+
+.header-content {
+    text-align: center;
+    font-size: 2.3rem;
+    color: rgb(255, 255, 255);
+}
+
+.head h1 {
+    margin-top: 10rem;
+}
+
+.header-content h1 span {
+    color: rgb(230, 164, 164);
+}
+
+.header-content h1 span:hover {
+    color: rgb(252, 142, 142);
+}
+
+.header-content h3 {
+    color: rgb(200, 200, 200);
+    margin: 0.3em;
+}
+
+.header-btn {
+    margin: 2rem;
+}
+
+.header-content a {
+    display: inline-block;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    border: 2px solid rgb(200, 200, 200);; 
+    border-radius: 0.2rem;
+    padding: 0.8em 1rem;
+    margin: 0.5em 0.3em;
+}
+
+.header-content a:hover{
+    color: #1c1f26;
+    background-color: rgb(200, 200, 200);
+    padding-inline-start: 2em;
+    transition: ease 0.8s;
+}
+
+.about {
+    overflow: hidden;
+    background-color:  #333842;
+}
+
+.about h2 {
+    margin: 2rem 0rem;
+}
+
+.about p {
+    margin: 2rem;
+}
+
+
+.projects {   
+    overflow: hidden;
+    padding: 4rem;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    margin: 1em 0;
+}
+
+.card-container {
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card {
+    background-color: #1c1f26;
+    border: 1px solid #333842 ;
+    border-radius: 0.625rem;
+    width: 18rem;
+    padding: 1.5rem;
+    box-shadow: 0 0.125rem 0.5rem #000000;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-0.5rem); /* ترتفع البطاقة شوي */
+    box-shadow: 0 0.5rem 1rem rgba(185, 185, 185, 0.15); /* ظل أقوى */
+}
+
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.1325rem;
+
+}
+
+.card h3 {
+    color: white;
+    margin: 1rem 0 1.5rem;
+    font-size: 1.25rem;
+}
+
+.card p {
+    color: rgb(200, 200, 200);
+    font-size: 1rem;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+    color: rgb(230, 164, 164);
+    text-decoration: none;
+}
+
+.card a:hover {
+    color: rgb(252, 142, 142);
+}
+
+.contact {
+    overflow: hidden;
+    padding: 4rem;
+}
+
+.contact-form {
+    text-align: center;
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #1c1f26;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(185, 185, 185, 0.1);
+
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: rgb(200, 200, 200);
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    width:5em;
+    font-size: 1rem;
+    background-color: #1c1f26;
+    color: white;
+    border: 2px solid rgb(200, 200, 200);; 
+    border-radius: 0.2rem;
+    padding: 0.8em 1rem;
+    margin: 0.5em 0.3em;
+}
+
+.contact-form button:hover {
+    color: #1c1f26;
+    background-color: rgb(200, 200, 200);
+    padding-inline-start: 2em;
+    transition: ease 0.8s;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #1c1f26;
+    font-size: 0.9rem;
+    border-top: 1px solid rgb(82, 82, 82);
+}
+  
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #888888;
+  transition: 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+    .header-content {
+        margin:0rem;
+        padding: 0.3rem;
+        font-size: 1.5rem;
+    }
+
+    .header-content a:hover {
+        padding-inline-start: 1rem;
+    }
+
+    .contact-form button:hover {
+        padding-inline-start: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;  /* بدال ما تكون سطر تصير عمود */
+    gap: 1rem;
+  }
+}

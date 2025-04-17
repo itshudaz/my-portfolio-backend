@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="burger" id="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav id="nav">
+            <ul>
+                <li><a href="#aboutme">About</a></li>
+                <li><a href="#works">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="head" id="home">
+            <div class="header-content">
+                <h1>Hi, I'm <span>Huda</span></h1>
+                <h3>Web Developer</h3>
+                <div class="header-btn">
+                    <a href="#works">see my works</a>
+                    <a href="#contact">contact me</a>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="aboutme">
+            <h2>About Me</h2>
+            <p>
+              I'm Huda — a curious mind and a self-driven web developer who enjoys solving problems and learning how things work behind the scenes. 
+              I value simplicity, clean design, and meaningful user experiences. 
+              Currently, I'm focused on improving my back-end and front-end skills to build complete, responsive websites from scratch. 
+              I believe growth comes from trying, failing, and iterating — and I'm always excited about the next challenge.
+            </p>
+        </section>
+        <section id="works" class="projects">
+            <h2>My Works</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="https://picsum.photos/150/100" alt="website">
+                    <h3>website</h3>
+                    <p>responsive website</p>
+                    <a href="#">View Project</a>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/150/100" alt="website">
+                    <h3>web page</h3>
+                    <p>landing page</p>
+                    <a href="#">View Project</a>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/150/100" alt="website">
+                    <h3>template</h3>
+                    <p>e-commerce site template</p>
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <h2>contact me</h2>
+            <form class="contact-form" action="http://127.0.0.1:5000/send-email" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="your name" required >
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="your Email"  required>
+                <label for="subject">Subject</label>
+                <textarea type="text" id="subject" name="message" autocomplete="off" placeholder="Write your message here..." required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Huda. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+            }
+          });
+        });
+        sections.forEach(section => {
+          observer.observe(section);
+        });
+      
+        // Burger menu toggle
+        const burger = document.getElementById('burger');
+        const nav = document.querySelector('nav ul');
+      
+        burger.addEventListener('click', () => {
+          nav.classList.toggle('show');
+        });
+      </script>      
+</body>
+</html>
